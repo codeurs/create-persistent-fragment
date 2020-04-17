@@ -1,6 +1,6 @@
 {
   "name": "create-persistent-fragment",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "module": "dist/create-persistent-fragment.js",
   "license": "ISC",
   "scripts": {
@@ -8,5 +8,8 @@
   },
   "devDependencies": {
     "typescript": "^3.8.3"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
