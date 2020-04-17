@@ -1,7 +1,8 @@
 {
   "name": "create-persistent-fragment",
-  "version": "0.0.1",
-  "module": "dist/create-persistent-fragment.js",
+  "version": "0.0.2",
+  "type": "module",
+  "module": "index.js",
   "license": "ISC",
   "scripts": {
     "prepublishOnly": "tsc"
@@ -10,6 +11,7 @@
     "typescript": "^3.8.3"
   },
   "files": [
+    "index.js",
     "dist"
   ]
 }
