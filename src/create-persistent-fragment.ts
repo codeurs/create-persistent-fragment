@@ -113,6 +113,10 @@ const createNativeFragmentFactory = () => {
     get textContent() {
       return childNodes.get(this).filter(isVisible).map(getText).join('')
     }
+    set textContent(v) {
+      while (this.lastChild) this.removeChild(this.lastChild)
+      this.append(document.createTextNode(v))
+    }
     hasChildNodes() {
       return 0 < childNodes.get(this).length
     }
@@ -299,6 +303,10 @@ const createOldBrowserFragmentFactory = () => {
       textContent: {
         get() {
           return childNodes.filter(isVisible).map(getText).join('')
+        },
+        set(v) {
+          while (this.lastChild) this.removeChild(this.lastChild)
+          this.append(document.createTextNode(v))
         }
       },
       hasChildNodes: {
